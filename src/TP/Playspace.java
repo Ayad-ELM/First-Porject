@@ -17,7 +17,7 @@ public class Playspace extends JPanel  {
 	private Timer timer;
 	private int ballSpeed = 10,
 			value = 3,
-			valueY = -8,
+			valueY = -5,
 			value1 = 3,
 			valueY1 = -5,
 			ballXpos = 50,
