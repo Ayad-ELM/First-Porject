@@ -20,32 +20,32 @@ public class Playspace extends JPanel  {
 			valueY = -5,
 			value1 = 3,
 			valueY1 = -5,
-			ballXpos = 50,
+			ballXpos = 50000,
 			ballYpos = 300,
-			ballXpos1 = 50,
+			ballXpos1 = 350,
 			ballYpos1 = 70;
 	public Playspace() {
 		addKeyListener(new KeyAdapter() {
-		
-			
+
+
 		});
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
 		setPreferredSize(new Dimension(690, 600));
 		timer = new Timer(ballSpeed,new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				if(new Rectangle(ballXpos, ballYpos, 30, 30).intersects(new Rectangle(ballXpos1, ballYpos1, 30, 30))) {
-					
+
 					value = -value;
 					valueY = -valueY;
 					value1 = -value1;
 					valueY1 = -valueY1;
 				}
-				
-				
+
+
 				if(ballXpos >=640 || ballXpos <=0) {
 					value = -value;
 				}
@@ -55,9 +55,9 @@ public class Playspace extends JPanel  {
 				if(ballYpos > 565) {
 					valueY = -valueY;
 				}
-				
+
 				/////////////
-				
+
 				if(ballXpos1 >=640 || ballXpos1 <=0) {
 					value1 = -value1;
 				}
@@ -67,8 +67,8 @@ public class Playspace extends JPanel  {
 				if(ballYpos1 > 565) {
 					valueY1 = -valueY1;
 				}
-				
-				
+
+
 				ballXpos+=value;
 				ballYpos+=valueY;
 				ballXpos1+=value1;
